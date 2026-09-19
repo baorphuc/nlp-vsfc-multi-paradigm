@@ -1,0 +1,47 @@
+sentence,sentiment,topic,split,n_words,negation,sarcasm_or_implication,multi_aspect,difficulty_note
+thực hành .,neutral,training_program,validation,3,không,không,không,"Câu quá ngắn, thiếu tín hiệu cảm xúc để phân loại"
+cần có thiết bị và phòng học tốt hơn .,negative,facility,train,10,không,không,có,"Dạng đề xuất, không có từ tiêu cực rõ ràng"
+giải bài tập .,neutral,lecturer,test,4,không,không,không,"Câu quá ngắn, thiếu tín hiệu cảm xúc để phân loại"
+"thân thiện , nhiệt tình .",positive,lecturer,train,6,không,không,không,
+"lớp học rộng rãi , giãng viên dạy nhiệt tình .",positive,facility,train,11,không,không,có,Nhãn topic chỉ là facility nhưng câu cũng khen giảng viên
+"và não của con người không thích sự dễ dàng , nếu chỉ xử lý sự dễ dàng thì não khó có thể phát triển đến khả năng của nó .",neutral,others,train,31,"có — chứa ""không thích"", ""khó có thể"" nhưng đây là phủ định trong lập luận logic, không phải phủ định cảm xúc về khóa học",không,không,"Câu lạc đề — nói về não bộ nói chung, không rõ liên quan gì đến topic ""others"" hay khóa học. Nhãn ""neutral"" khó giải thích vì câu không đánh giá gì cụ thể."
+nhìn thấy hơi nghiêm ( khách quan thôi ạ ) .,neutral,lecturer,train,11,không,"có — phần ""(khách quan thôi ạ)"" là cách nói giảm nhẹ/rào trước để tránh bị hiểu là chê trách, mang tính ẩn ý về thái độ người viết",không,"Từ ""nghiêm"" thường mang nghĩa hơi tiêu cực nhưng câu được gán neutral — có thể do phần rào đón trong ngoặc làm giảm mức độ tiêu cực, khiến ranh giới neutral/negative mơ hồ"
+phòng lab tốt hơn .,positive,facility,train,5,không,không,không,"Cấu trúc ""...tốt hơn"" giống câu #2 (negative) nhưng câu này lại positive — có thể do thiếu ngữ cảnh trước đó (câu gốc gãy khỏi đoạn dài hơn), nhãn khó đoán chỉ dựa vào câu đơn lẻ"
+khó tiếp thu .,negative,others,validation,4,không,không,không,
+"thưa , không có ạ .",neutral,others,train,6,không,không,không,
+em không có ý kiến gì .,neutral,others,test,7,không,không,không,
+"thế nhưng việc thời hạn nộp bài không được chính xác gây khó khăn trong việc nộp bài , cụ thể là thời hạn nộp bài đôi khi đã được ấn định , nhưng sau đó lại được gia hạn thêm , vậy thì không công bằng với những người đã bỏ công sức ra để cố gắng hoàn thành công việc đúng thời hạn ban đầu .",negative,training_program,train,68,có,không,có,"Câu dài, lập luận nhiều bước (nêu vấn đề → dẫn chứng cụ thể → hệ quả bất công) — negative rõ nhưng đòi hỏi model hiểu toàn bộ mạch lập luận, không chỉ từ vựng đơn lẻ"
+không cho thời gian báo cáo rõ ràng .,negative,lecturer,train,9,có,không,không,"Câu thiếu chủ ngữ rõ ràng (ai không cho? giảng viên hay chương trình?) — nhãn topic ""lecturer"" hợp lý nhưng phải suy luận ngầm"
+các bài tập trên lớp rất hợp lý .,positive,training_program,test,9,không,không,không,
+giảm tảibỏ những phần không thật sự cần thiết .,negative,training_program,validation,10,có,không,không,"Lỗi chính tả: ""tảibỏ"" là 2 từ bị dính liền (""tải"" + ""bỏ""), có thể gây nhiễu cho tokenizer. Câu mơ hồ: có thể hiểu là phàn nàn (chương trình dư thừa → negative) hoặc đề xuất xây dựng (nếu làm sẽ tốt hơn → positive). Nhãn gốc là negative nhưng ranh giới không rõ ràng."
+chưa từng gặp giảng viên wzjwz144 ở môn thực hành thiết bị mạng và truyền thông đa phương tiện .,negative,others,validation,20,có ,không,không,"Câu chỉ nêu sự kiện, không có từ khen/chê trực tiếp — sentiment ""negative"" phải suy luận từ hàm ý (vắng mặt = đáng phàn nàn), không đến từ từ vựng rõ ràng"
+"thầy còn khó tính và để học sinh tự tìm hiểu hơi nhiều , nhiều chỗ thầy dạy hơi khó hiểu .",negative,lecturer,train,22,không,không,có,"Có từ giảm nhẹ ""hơi"" lặp lại 2 lần (""hơi nhiều"", ""hơi khó hiểu"") — mức độ tiêu cực nhẹ, không gay gắt, nhưng vẫn gán negative rõ ràng"
+"thầy hay đi trễ nhưng không nhiều , chỉ 15 phút mỗi ngày .",neutral,lecturer,train,14,có ,có,không,"Nội dung là phàn nàn (đi trễ) nhưng nhãn là neutral, không phải negative — có thể do câu tự giảm nhẹ mức độ nghiêm trọng (""không nhiều"", ""chỉ 15 phút""), khiến ranh giới neutral/negative mơ hồ"
+"tóm lại , em hoàn toàn không hài lòng về chất lượng giảng dạy của thầy .",negative,lecturer,train,17,có,không,không,
+"gần tới kỳ thi cuỗi kỳ mà sinh viên chưa biết được mình đang học gì , dù có cố gắng nghe nhưng vẫn không hiểu .",negative,training_program,train,27,có,không,không,"Lỗi chính tả ""cuỗi kỳ"" (đúng là ""cuối kỳ""). Cấu trúc nhượng bộ ""dù...nhưng vẫn"" nhấn mạnh mức độ nghiêm trọng — dù đã cố gắng mà vẫn không hiểu"
+"giảng viên cần đưa ra ví dụ cụ thể để cho sinh viên được hiểu có thể kèm lấy mấy bài thực hành mô phỏng cho sinh viên xem để sinh viên được chứng kiến , như thế sẽ dễ hiểu bài hơn .",negative,lecturer,test,44,không,không,không,"Toàn bộ câu là đề xuất tích cực/xây dựng (""cần đưa ra"", ""để dễ hiểu bài hơn""), không có từ ngữ tiêu cực — nhưng vẫn gán negative. Cùng nhóm với các câu đề xuất khác (thiết bị, giảm tải chương trình)"
+tình huống hay .,positive,others,test,4,không,không,không,
+tăng cường kỹ năng làm việc nhóm .,negative,training_program,train,8,không,không,không,
+cô dạy rất tốt và nhiệt tình .,positive,lecturer,test,8,không,không,không,
+đôi lúc sợ sợ thầy colonsad .,negative,lecturer,train,7,không,không,không,"Có artifact/chuỗi “colonsad”, có vẻ là tên bị mã hóa hoặc dữ liệu nhiễu."
+"phòng máy cũ , nhưng nhìn chung thì không có ảnh hưởng gì vì thầy dạy rất nhiệt tình .",neutral,facility,test,20,có,Không ,có,Đề cập phòng máy (facility) và đồng thời đánh giá sự nhiệt tình của giảng viên (lecturer); nội dung có 2 aspect rõ ràng.
+thầy đôi khi bỏ tiết không báo trước .,negative,training_program,train,9,có,không,không,"Câu có nhiều thông tin về việc thay đổi lịch học và xung đột với lịch học bên ngoài, cần phân biệt các khía cạnh khi gán nhãn."
+"học kỳ này em học lại môn game , và giờ của thời khoá biểu là tiết 1 - 2 ngày thứ 4 thế nhưng em không hiểu lý do gì lại chuyển sang thứ 7 vào tiết 6 - 7 và em bị kẹt giờ học anh văn bên ngoài nên không học được .",negative,training_program,train,56,có,không,có,"Câu dài, chứa nhiều ý liên quan đến lịch học, thời gian học và việc không thể tham gia do trùng lịch; cần xem xét nhiều khía cạnh."
+"em thích cách dạy của thầy , làm bài tập sau khi giảng xong lý thuyết cho sinh viên có thể nhớ ngay hôm ấy không cần về nhà coi lại bài .",positive,others,validation,33,có,không ,không,
+thấy giảng dạy nói môn này muốn học thì phải có phòng thí nghiệm .,neutral,facility,train,15,không,không,không,
+thời gian bài tập tương đối tốt .,positive,training_program,train,8,không,không,không,
+trao đổi nhóm .,neutral,training_program,test,4,không,không,không,"Câu quá ngắn, chỉ nêu “trao đổi nhóm”, nên thiếu ngữ cảnh để xác định rõ ý kiến/khía cạnh cụ thể."
+tăng thêm thời lượng môn học .,negative,training_program,validation,7,không,không,không,"Câu ngắn, chỉ đưa ra đề xuất tăng thời lượng môn học, không nêu lý do hoặc mức độ cụ thể."
+"mong ban quản lý cơ sở ý kiến giúp chúng em , em xin cảm ơn !",neutral,facility,train,17,không,không,không,
+môn học này chất lượng bình thường .,neutral,training_program,test,8,không,không,không,
+em thấy việc này khá bổ ích .,positive,others,train,8,không,không,không,"Câu ngắn, “việc này” không nêu rõ đang đề cập đến hoạt động/nội dung nào."
+có lẽ phải nâng cấp trang thiết bị .,negative,facility,train,9,không,không,không,
+từ đó cho thấy doubledot sinh viên lên lớp không được lợi ích gì vì giảng viên không chịu thướng dẫn chỉ ngồi lỳ một chỗ có khi giảng viên lại không chịu lên lớp vậy ở nhà tự học còn hơn .,negative,lecturer,test,43,có,có,có,Có artifact “doubledot”; câu chứa nhiều ý đánh giá liên quan đến giảng viên và việc lên lớp/tự học.
+đề nghị nhà trường có thêm phòng lab để sinh viên học phần nghe được dễ dàng và có hiệu quả hơn !,negative,facility,test,23,không,không,không,
+sẽ tạo được nhiều hứng thú hơn trong giờ học đòi hỏi nhiều kiến thức chuyên sâu này !,negative,others,train,19,không,không,không,
+phòng thực hành tốt .,positive,facility,train,5,không,không,không,
+"mỗi buổi thực hành sinh viên chỉ có nhiệm vụ download bài tập từ courses và tự làm , giảng viên không giảng nội dung thực hành cho sinh viên hiểu , chỉ khi sinh viên hỏi thì mới trả lời , mỗi buổi học thực hành , giảng viên cần phải giới thiệu sơ về bài học , mục tiêu và kết quả sinh viên sẽ học được gì .",negative,training_program,train,71,có,không,có,"Nói về hoạt động thực hành, nhiệm vụ sinh viên và cách tổ chức bài tập; có nhiều khía cạnh liên quan đến training program/thực hành. Câu bị cắt ở cuối."
+em rất quý cô cũng như toàn thể các giảng viên trong trường nhưng em phải nói với thầy một điều chân thành rằng em cảm thấy việc điểm danh khi đi học là không hiệu quả .,negative,lecturer,train,38,không,không,có,Khen cô và giảng viên nói chung nhưng đồng thời có phần nội dung phía sau bị cắt; cần xem câu đầy đủ để xác định các aspect.
+"giảng viên nhiệt tình , phương pháp giảng dạy dễ hiểu .",positive,lecturer,train,12,không,không,không,
+có bài tập rõ ràng .,positive,training_program,train,6,không,không,không,"Câu ngắn, chỉ nhận xét bài tập rõ ràng nhưng không nêu cụ thể bài tập hoặc khía cạnh được đánh giá."
+tạo không gian học tập vui vẻ !,positive,lecturer,train,8,không,không,không,

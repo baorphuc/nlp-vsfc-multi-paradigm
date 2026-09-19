@@ -1,0 +1,12 @@
+﻿task,model,class,precision,recall,f1,support
+sentiment,SVM,negative,0.885,0.94,0.912,1409
+sentiment,SVM,neutral,0.438,0.317,0.368,167
+sentiment,SVM,positive,0.934,0.909,0.921,1590
+sentiment,SVM,MACRO_AVG,0.752,0.722,0.734,3166
+sentiment,SVM,ACCURACY,,,0.892,3166
+topic,SVM,lecturer,0.93,0.9,0.915,2290
+topic,SVM,training_program,0.65,0.734,0.69,572
+topic,SVM,facility,0.899,0.917,0.908,145
+topic,SVM,others,0.462,0.453,0.457,159
+topic,SVM,MACRO_AVG,0.735,0.751,0.742,3166
+topic,SVM,ACCURACY,,,0.848,3166

@@ -1,0 +1,10 @@
+{
+  "sentiment": {
+    "accuracy": 0.9365,
+    "macro_f1": 0.8275
+  },
+  "topic": {
+    "accuracy": 0.8907,
+    "macro_f1": 0.8053
+  }
+}

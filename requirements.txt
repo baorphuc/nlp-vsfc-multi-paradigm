@@ -1,0 +1,25 @@
+# Data handling
+pandas>=2.0
+numpy>=1.24
+
+# Visualization
+matplotlib>=3.7
+
+# Vietnamese word segmentation
+pyvi>=0.1.1
+
+# Classic ML
+scikit-learn>=1.3
+
+# Deep learning / Transformers
+torch>=2.1
+transformers>=4.40
+datasets>=2.20
+accelerate>=0.30
+huggingface_hub>=0.23
+
+# LLM API
+google-genai>=1.0
+
+# Utilities
+tqdm>=4.66
