@@ -1,3 +1,30 @@
-
+# Model checkpoints (quá lớn cho GitHub, giới hạn 100MB/file)
 *.pt
+*.bin
+*.safetensors
 *.pth
+
+# File tạm / trung gian không cần thiết
+data/processed/gemini_results_temp.csv
+
+# Cache Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+# Cache thư viện đã tải (HuggingFace, pyvi...)
+.cache/
+
+# API key / thông tin nhạy cảm
+*.env
+.env
+secrets.json
+credentials.json
+
+# File hệ điều hành
+.DS_Store
+Thumbs.db
+
+# Virtual environment
+venv/
+.venv/
